@@ -57,7 +57,7 @@ public class Order {
     @ManyToMany
     @JoinTable(name = "orders_details",
             joinColumns = @JoinColumn(name = "order_id"),
-            inverseJoinColumns = @JoinColumn(name = "datail_id")
+            inverseJoinColumns = @JoinColumn(name = "detail_id")
     )
     private List<Detail> details;
 }
