@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController("/bicycles")
-public class Controller {
+public class BicycleController {
     @Autowired
     private BicycleService bicycleService;
     @GetMapping("/allPage")
