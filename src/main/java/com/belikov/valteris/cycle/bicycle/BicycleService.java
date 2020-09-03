@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BicycleService {
@@ -16,4 +17,15 @@ public class BicycleService {
         return bicycleRepository.findAll();
     }
 
+    public Optional<Bicycle> getById(Long id) {
+        return bicycleRepository.findById(id);
+    }
+
+    public void add(Bicycle newBicycle) {
+        bicycleRepository.save(newBicycle);
+    }
+
+    public void delete(Long id) {
+        bicycleRepository.deleteById(id);
+    }
 }
