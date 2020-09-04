@@ -10,9 +10,10 @@ import java.util.List;
 
 @RestController("/bicycles")
 public class BicycleController {
-    
+
     @Autowired
     private BicycleService bicycleService;
+
     @GetMapping("/allPage")
     public String bicyclePage() {
         return "bicyclesList"; //could be changed to any appropriate string;
