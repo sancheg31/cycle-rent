@@ -21,7 +21,7 @@ public class BicycleService {
         return bicycleRepository.findById(id);
     }
 
-    public void add(Bicycle newBicycle) {
+    public void save(Bicycle newBicycle) {
         bicycleRepository.save(newBicycle);
     }
 

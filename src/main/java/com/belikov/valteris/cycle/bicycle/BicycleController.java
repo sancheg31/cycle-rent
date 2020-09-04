@@ -32,7 +32,7 @@ public class BicycleController {
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public void add(@RequestBody Bicycle newBicycle) {
-        bicycleService.add(newBicycle);
+        bicycleService.save(newBicycle);
     }
 
     @DeleteMapping("/delete/{id}")

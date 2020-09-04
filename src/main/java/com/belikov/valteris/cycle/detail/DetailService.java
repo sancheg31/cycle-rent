@@ -13,7 +13,7 @@ public class DetailService {
     @Autowired
     private DetailRepository detailRepository;
 
-    public void add(Detail newDetail) {
+    public void save(Detail newDetail) {
         detailRepository.save(newDetail);
     }
 
