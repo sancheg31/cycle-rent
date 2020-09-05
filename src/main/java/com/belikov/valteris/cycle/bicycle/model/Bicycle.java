@@ -45,7 +45,7 @@ public class Bicycle {
     @ManyToMany(mappedBy = "bicycles")
     private List<Order> orders;
 
-    @ManyToMany()
+    @ManyToMany
     @JoinTable(name = "bicycle_detail",
             joinColumns = @JoinColumn(name = "bicycle_id"),
             inverseJoinColumns = @JoinColumn(name = "detail_id")
