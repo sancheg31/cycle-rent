@@ -1,32 +1,20 @@
 package com.belikov.valteris.cycle.user;
 
 import com.belikov.valteris.cycle.user.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class UserService {
+public interface UserService {
+    void save(User user);
 
-    @Autowired
-    private UserRepository userRepository;
+    List<User> getAll();
 
-    public void save(User newUser) {
-        userRepository.save(newUser);
-    }
+    Optional<User> getById(Long id);
 
-    public List<User> getAll() {
-        return userRepository.findAll();
-    }
+    void delete(Long id);
 
-    public Optional<User> getById(Long id) {
-       return userRepository.findById(id);
-    }
+    boolean register(User user);
 
-    public void delete(Long id) {
-        userRepository.deleteById(id);
-    }
-
+    Optional<User> findByEmail(String email);
 }

@@ -20,4 +20,4 @@ target/
 *.iml
 *.ipr
 
-**/libs/
+src/main/resources/static/libs/*

@@ -1,32 +1,16 @@
 package com.belikov.valteris.cycle.order;
 
 import com.belikov.valteris.cycle.order.model.Order;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+public interface OrderService {
+    void save(Order newOrder);
 
-@Service
-public class OrderService {
+    List<Order> getAll();
 
-    @Autowired
-    private OrderRepository orderRepository;
+    Optional<Order> getById(Long id);
 
-    public void save(Order newOrder) {
-        orderRepository.save(newOrder);
-    }
-
-    public List<Order> getAll() {
-        return orderRepository.findAll();
-    }
-
-    public Optional<Order> getById(Long id) {
-        return orderRepository.findById(id);
-    }
-
-    public void delete(Long id) {
-        orderRepository.deleteById(id);
-    }
+    void delete(Long id);
 }
