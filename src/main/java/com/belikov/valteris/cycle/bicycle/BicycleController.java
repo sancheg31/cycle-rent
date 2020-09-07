@@ -18,7 +18,7 @@ import java.util.List;
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class BicycleController {
 
-    private BicycleService bicycleService;
+    private final BicycleService bicycleService;
 
     @GetMapping("/allPage")
     public String bicyclePage() {
