@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/x-icon" href="images/logos/icon.png" />
+    <title>Menu</title>
+    <!-- Font Awesome icons (free version)-->
+    <link href="libs/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="libs/bootstrap-4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link href="styles/menu.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" th:href="@{/index}"><img src="images/logos/logo.png" alt="" /></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <em class="fas fa-bars ml-1"></em>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+                <li class="nav-item"><a class="nav-link nav-active" th:href="@{/bicycles}">Bicycles</a></li>
+                <li class="nav-item"><a class="nav-link" href="">My orders</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Basket</a></li>
+                <li class="nav-item"><a class="nav-link" href=""><em class="fas fa-sign-out-alt"></em></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2 class="text-uppercase">Our Bicycles</h2>
+            <span class="title-line">
+
+                <em class="fa fa-bicycle fa-2x" aria-hidden="true"></em>
+
+            </span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+</header>
+<section class="bike-list page-section" id="list">
+    <div class="container">
+        <div class="btn-group my-drop-list-button">
+            <button type="button" class="btn btn-secondary dropdown-toggle main-dd-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choose sort type...
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <button class="dropdown-item" type="button">Price up</button>
+                <button class="dropdown-item" type="button">Price down</button>
+                <button class="dropdown-item" type="button">Weight up</button>
+                <button class="dropdown-item" type="button">Weight down</button>
+            </div>
+
+            <button type="button" class="btn btn-secondary dropdown-toggle main-dd-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choose sort type...
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <button class="dropdown-item" type="button">Price up</button>
+                <button class="dropdown-item" type="button">Price down</button>
+                <button class="dropdown-item" type="button">Weight up</button>
+                <button class="dropdown-item" type="button">Weight down</button>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
+            <div class="col mb-4">
+                <div class="card h-100 border-my">
+                    <a href="bicycle?id=01">
+                        <img src="images/bicycles/1.jpg" class="card-img-top" alt="Bike 01">
+                        <div class="card-body">
+                            <h5 class="card-title">Aston Martin One-77</h5>
+                            <h6 class="card-title card-price">39$/per hour</h6>
+                            <p class="card-text">This content is a little bit longer.</p>
+                            <ul>
+                                <li>мощная рама</li>
+                                <li>усиленная тормозная система</li>
+                                <li>25 скоростей</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 border-my">
+                    <a href="bicycle?id=02">
+                        <img src="images/bicycles/2.jpg" class="card-img-top" alt="Bike 02">
+                        <div class="card-body">
+                            <h5 class="card-title">Aston Martin One-77</h5>
+                            <h6 class="card-title card-price">39$/per hour</h6>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 border-my">
+                    <a href="bicycle?id=03">
+                        <img src="images/bicycles/3.jpg" class="card-img-top" alt="Bike 03">
+                        <div class="card-body">
+                            <h5 class="card-title">Aston Martin One-77</h5>
+                            <h6 class="card-title card-price">39$/per hour</h6>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 border-my">
+                    <a href="bicycle?id=04">
+                        <img src="images/bicycles/4.jpg" class="card-img-top" alt="Bike 04">
+                        <div class="card-body">
+                            <h5 class="card-title">Aston Martin One-77</h5>
+                            <h6 class="card-title card-price">39$/per hour</h6>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 border-my">
+                    <a href="bicycle?id=05">
+                        <img src="images/bicycles/5.jpg" class="card-img-top" alt="Bike 05">
+                        <div class="card-body">
+                            <h5 class="card-title">Aston Martin One-77</h5>
+                            <h6 class="card-title card-price">39$/per hour</h6>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 border-my">
+                    <a href="bicycle?id=06">
+                        <img src="images/bicycles/6.jpg" class="card-img-top" alt="Bike 06">
+                        <div class="card-body">
+                            <h5 class="card-title">Aston Martin One-77</h5>
+                            <h6 class="card-title card-price">39$/per hour</h6>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 border-my">
+                    <a href="bicycle?id=07">
+                        <img src="images/bicycles/7.jpg" class="card-img-top" alt="Bike 07">
+                        <div class="card-body">
+                            <h5 class="card-title">Aston Martin One-77</h5>
+                            <h6 class="card-title card-price">39$/per hour</h6>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 border-my">
+                    <a href="bicycle?id=08">
+                        <img src="images/bicycles/8.jpg" class="card-img-top" alt="Bike 08">
+                        <div class="card-body">
+                            <h5 class="card-title">Aston Martin One-77</h5>
+                            <h6 class="card-title card-price">39$/per hour</h6>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</section>
+
+
+<!-- Footer-->
+<footer class="footer py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-lg-right">Copyright © <span style="color: #05a081">Bicycle Rent </span> 2020</div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JS-->
+<script src="libs/jquery/jquery-3.4.1.min.js"></script>
+<script src="libs/bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/index.js"></script>
+</body>
+</html>
