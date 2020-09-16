@@ -362,7 +362,10 @@ section#contact .contacts-map {
 .border-my {
     border-radius: 0;
     border: 0;
-    /*box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);*/
+}
+
+.border-my h5{
+    color: black;
 }
 
 .border-my .card-body {
@@ -372,13 +375,20 @@ section#contact .contacts-map {
 .border-my a {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
     text-decoration: none;
-    color: black;
+    color: #6b6b6b;
     height: 500px;
+    transition: all .5s cubic-bezier(.25,.8,.25,1);
 }
 
 .border-my a:hover {
-    box-shadow: 0 1px 5px #05a081;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.12), 0 6px 10px 0 rgba(0,0,0,.12), 0 1px 18px 0 rgba(0,0,0,.12);
     transform: translate(7px, -7px);
+}
+
+@media (max-width: 768px) {
+    .bike-list .card a {
+        height: auto;
+    }
 }
 
 .card-price {
@@ -390,15 +400,52 @@ section#contact .contacts-map {
 }
 
 .my-drop-list-button {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: block;
     text-align: right;
 }
 
-.my-drop-list-button .main-dd-button {
+.main-dd-button {
     padding: 10px 30px;
+    margin: 0 0 10px 10px !important;
+    border-radius: .25rem !important;
 }
 
+#list {
+    padding: 3rem 0;
+}
+
+.my-pagination {
+    margin-top: 20px;
+}
+
+.my-pagination .page-link {
+     color: #05a081;
+}
+.page-item.active .page-link {
+     background-color: #05a081;
+     border-color: #05a081;
+ }
 
 
-
+.bicycle-info-list {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 10px 0;
+    text-align: center;
+    padding: 0;
+}
+.bicycle-info-list li {
+    border: 1px solid #ccc;
+    flex-basis: 100%;
+    padding: 3px;
+    position: relative;
+    list-style-type: none;
+}
+.bicycle-info-list em {
+    color: #05a081;
+}
