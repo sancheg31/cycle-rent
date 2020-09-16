@@ -18,6 +18,7 @@
 --
 -- Table structure for table `bicycles`
 --
+USE bicycle_rent;
 
 DROP TABLE IF EXISTS `bicycles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

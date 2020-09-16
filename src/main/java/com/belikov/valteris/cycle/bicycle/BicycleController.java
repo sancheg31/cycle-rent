@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -22,7 +23,10 @@ public class BicycleController {
 
     @GetMapping("/allPage")
     public String bicyclePage() {
-        return "bicyclesList"; //could be changed to any appropriate string;
+        return "index";
+       /* ModelAndView view = new ModelAndView();
+        view.setViewName("index");
+        return view; //could be changed to any appropriate string;*/
     }
 
     @GetMapping("/all")
