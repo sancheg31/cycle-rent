@@ -19,4 +19,9 @@ public class UserController {
     public String showMenuPage() {
         return "bicycle_list";
     }
+
+    @GetMapping("/bicycle")
+    public String showBicyclePage() {
+        return "bicycle";
+    }
 }
