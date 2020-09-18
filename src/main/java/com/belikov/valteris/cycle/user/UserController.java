@@ -24,4 +24,9 @@ public class UserController {
     public String showBicyclePage() {
         return "bicycle";
     }
+
+    @GetMapping("/cart")
+    public String showCartPage() {
+        return "cart";
+    }
 }
