@@ -2,7 +2,7 @@
     "use strict"; // Start of use strict
 
     // Collapse Navbar
-    var navbarCollapse = function () {
+    let navbarCollapse = function () {
         if ($("#mainNav").offset().top > 100) {
             $("#mainNav").addClass("navbar-shrink");
         } else {
