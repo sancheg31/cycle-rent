@@ -8,3 +8,22 @@
 .time-input {
     width: 170px;
 }
+
+header.masthead {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: #fff;
+    background-image: url("https://images.pexels.com/photos/1287075/pexels-photo-1287075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover; }
+
+.masthead .section-title h2 {
+    margin-bottom: 10px;
+}
+
+.masthead .section-title p {
+    margin-top: 10px;
+}
