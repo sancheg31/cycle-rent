@@ -29,4 +29,9 @@ public class UserController {
     public String showCartPage() {
         return "cart";
     }
+
+    @GetMapping("/checkout")
+    public String showCheckoutPage() {
+        return "checkout";
+    }
 }
