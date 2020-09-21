@@ -1,0 +1,97 @@
+.section-1 {
+    padding: 4rem 0;
+}
+.my-orders h1 {
+    padding: 50px;
+}
+.my-orders .orders-title span {
+    padding-bottom: 7px;
+    border-bottom: 5px #05a081 solid;
+}
+.my-orders .order-item {
+    background-color: #ffae071a;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, .2), 0 1px 2px 0 rgba(0, 0, 0, .2), 0 1px 4px 0 rgba(0, 0, 0, .2);
+}
+.my-orders .order-item .right-block {
+    float: right;
+}
+.my-orders .order-item .info div {
+    display: inline-block;
+    margin: 0 10px;
+}
+.my-orders .order-item .info .status {
+    font-weight: bold;
+}
+.my-orders .order-item .info .price {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #05a081;
+}
+.my-orders .order-item .order-dish-items {
+    font-size: 15px;
+    font-weight: normal;
+    vertical-align: text-top;
+    margin-right: 6px;
+    background-color: #05a081;
+}
+.my-orders .order-item .double-arrow {
+    font-size: 25px;
+    vertical-align: text-top;
+    color: #555;
+    transition-duration: 0.2s;
+}
+.my-orders .order-item a[aria-expanded=true] .double-arrow {
+    transform: rotate(90deg);
+}
+.my-orders .order-item .created-at {
+    color: #555;
+    font-size: 17px;
+    font-style: italic;
+}
+.my-orders .order-item .info-list {
+    padding: 10px;
+}
+.my-orders .order-item .info-list img {
+    display: inline-block;
+    width: 219px;
+}
+.my-orders .order-item .info-list .info-list-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    max-width: 240px;
+    vertical-align: top;
+    border: 1px solid #5454544f;
+    background-color: #fff;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .12), 0 6px 10px 0 rgba(0, 0, 0, .12), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+.my-orders .order-item .info-list .info-list-item p {
+    color: #6b6b6b;
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+.my-orders .order-item .info-list .dish-name {
+    display: block;
+    color: #777;
+}
+.my-orders .order-item .info-list .info-list__item-price {
+    font-size: 17px;
+}
+.my-orders .order-item .info-list .info-list__item-price .info-list__item-price__items {
+    color: #555;
+    font-weight: bold;
+}
+.my-orders .order-item .info-list .info-list__item-price .info-list__item-price__cost {
+    color: #05a081;
+    font-weight: bold;
+}
+.my-orders .order-item .divider {
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #05a081;
+    margin: 10px auto;
+}

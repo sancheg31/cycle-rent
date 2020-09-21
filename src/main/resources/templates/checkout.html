@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -11,128 +11,108 @@
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
-           type="text/css"/>
+          type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" href="libs/bootstrap-4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link href="styles/bicycle_list.css" rel="stylesheet"/>
     <link rel="stylesheet" href="styles/Bootstrap-4---Payment-Form.css">
-
+    <link href="styles/common/navigation.css" rel="stylesheet"/>
+    <link href="styles/common/footer.css" rel="stylesheet"/>
     <link href="styles/bicycle_list.css" rel="stylesheet"/>
 </head>
 
 <body>
-  
-  <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-  <div class="container">
-      <a class="navbar-brand js-scroll-trigger" th:href="@{/index}"><img src="images/logos/logo.png" alt=""/></a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-              data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-              aria-label="Toggle navigation">
-          Menu
-          <em class="fas fa-bars ml-1"></em>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-              <li class="nav-item"><a class="nav-link active" th:href="@{/bicycles}">Bicycles</a></li>
-              <li class="nav-item"><a class="nav-link" href="">My orders</a></li>
-              <li class="nav-item"><a class="nav-link" th:href="@{/cart}">Basket</a></li>
-              <li class="nav-item"><a class="nav-link" href=""><em class="fas fa-sign-out-alt"></em></a></li>
-          </ul>
-      </div>
-  </div>
-</nav>
-  <div class="container py-5">
-  <div class="row" style = "margin-top: 8%; box-shadow: 0px 0px 9px 2px rgb(19,22,25)">
-    <div class="col-lg-7 mx-auto">
-     
-      <div class="bg-white rounded-lg shadow-sm p-5">
-        <!-- Credit card form tabs -->
-        <ul role="tablist" class="nav nav-pills rounded-pill nav-fill mb-3">
-          <li class="nav-item">
-            <a data-toggle="pill bg-dark" href="#nav-tab-card" class="nav-link active rounded-pill" >
-                                <i class="fa fa-credit-card"></i>
-                                Credit Card
-                            </a>
-        </ul>
-        <!-- End -->
+<div th:insert="common/navigation-minor :: navigation"></div>
+
+<div class="container py-5">
+    <div class="row" style="margin-top: 8%; box-shadow: 0px 0px 9px 2px rgb(19,22,25)">
+        <div class="col-lg-7 mx-auto">
+
+            <div class="bg-white rounded-lg shadow-sm p-5">
+                <!-- Credit card form tabs -->
+                <ul role="tablist" class="nav nav-pills rounded-pill nav-fill mb-3">
+                    <li class="nav-item">
+                        <a data-toggle="pill bg-dark" href="#nav-tab-card" class="nav-link active rounded-pill">
+                            <i class="fa fa-credit-card"></i>
+                            Credit Card
+                        </a>
+                </ul>
+                <!-- End -->
 
 
-        <!-- Credit card form content -->
-        <div class="tab-content">
+                <!-- Credit card form content -->
+                <div class="tab-content">
 
-          <!-- credit card info-->
-          <div id="nav-tab-card" class="tab-pane fade show active">
-            <p class="alert alert-success">Some text success or error</p>
-            <form role="form">
-              <div class="form-group">
-                <label for="username">Full name (on the card)</label>
-                <input type="text" name="username" placeholder="Jeff Doe" required class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="cardNumber">Card number</label>
-                <div class="input-group">
-                  <input type="text" name="cardNumber" placeholder="Your card number" class="form-control" required>
-                  <div class="input-group-append">
+                    <!-- credit card info-->
+                    <div id="nav-tab-card" class="tab-pane fade show active">
+                        <p class="alert alert-success">Some text success or error</p>
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="username">Full name (on the card)</label>
+                                <input type="text" name="username" placeholder="Jeff Doe" required class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="cardNumber">Card number</label>
+                                <div class="input-group">
+                                    <input type="text" name="cardNumber" placeholder="Your card number"
+                                           class="form-control" required>
+                                    <div class="input-group-append">
                     <span class="input-group-text text-muted">
                                                 <i class="fa fa-cc-visa mx-1"></i>
                                                 <i class="fa fa-cc-amex mx-1"></i>
                                                 <i class="fa fa-cc-mastercard mx-1"></i>
                                             </span>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-8">
-                  <div class="form-group">
-                    <label><span class="hidden-xs">Expiration</span></label>
-                    <div class="input-group">
-                      <input type="number" placeholder="MM" name="" class="form-control" required>
-                      <input type="number" placeholder="YY" name="" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <label><span class="hidden-xs">Expiration</span></label>
+                                        <div class="input-group">
+                                            <input type="number" placeholder="MM" name="" class="form-control" required>
+                                            <input type="number" placeholder="YY" name="" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group mb-4">
+                                        <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                                            <i class="fa fa-question-circle"></i>
+                                        </label>
+                                        <input type="text" required class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 style="margin-bottom: 10px;"><a href="#" class="text-dark d-inline-block align-middle">Price:
+                                390 UAH</a></h5>
+                            <button type="button" class="subscribe btn btn-dark btn-block rounded-pill shadow-sm">
+                                Confirm
+                            </button>
+                            <button type="button" class="subscribe btn btn-dark btn-block rounded-pill shadow-sm"
+                                    th:href="@{/cart}"> Cancel
+                            </button>
+                        </form>
                     </div>
-                  </div>
+                    <!-- End -->
                 </div>
-                <div class="col-sm-4">
-                  <div class="form-group mb-4">
-                    <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
-                                                <i class="fa fa-question-circle"></i>
-                                            </label>
-                    <input type="text" required class="form-control">
-                  </div>
-                </div>
-              </div>
-              <h5 style="margin-bottom: 10px;"> <a href="#" class="text-dark d-inline-block align-middle">Price: 390 UAH</a></h5>
-              <button type="button" class="subscribe btn btn-dark btn-block rounded-pill shadow-sm"> Confirm  </button>
-              <button type="button" class="subscribe btn btn-dark btn-block rounded-pill shadow-sm" th:href="@{/cart}"> Cancel  </button>
-            </form>
-          </div>
-          <!-- End -->
-  </div>
-        <!-- End -->
+                <!-- End -->
 
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-  <!-- Footer-->
- <footer class="footer py-4">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12 text-lg-right">Copyright © <span style="color: #05a081">Bicycle Rent </span> 2020
-          </div>
-      </div>
-  </div>
-</footer>
-    <!-- Bootstrap core JS-->
-    <script src="libs/jquery/jquery-3.4.1.min.js"></script>
-    <script src="libs/bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script>
-    <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/index.js"></script>
+<!-- Footer-->
+<div th:insert="common/footer :: footer"></div>
 
-    <script src="js/Bootstrap-4---Payment-Form.js"></script>
+<!-- Bootstrap core JS-->
+<script src="libs/jquery/jquery-3.4.1.min.js"></script>
+<script src="libs/bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<script src="js/Bootstrap-4---Payment-Form.js"></script>
 </body>
 
 </html>

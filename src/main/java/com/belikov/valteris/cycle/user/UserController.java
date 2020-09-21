@@ -15,9 +15,14 @@ public class UserController {
         return "index";
     }
 
-    @GetMapping("/bicycles")
+    @GetMapping("/bicycleList")
     public String showMenuPage() {
         return "bicycle_list";
+    }
+
+    @GetMapping("/myOrders")
+    public String showOrdersPage() {
+        return "my-orders";
     }
 
     @GetMapping("/bicycle")
