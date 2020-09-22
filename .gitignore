@@ -21,3 +21,4 @@ target/
 *.ipr
 
 src/main/resources/static/libs/**
+src/main/resources/application.properties

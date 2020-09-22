@@ -32,15 +32,23 @@ public class Bicycle {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "description", nullable = false)
-    private String description;
+    @Column(name = "type", nullable = false)
+    private String type;
 
-    @Column(name = "photo", nullable = false)
-    private String photo;
+    @Column(name = "weight", nullable = false)
+    private double weight;
+
+    @Column(name = "num_of_speeds", nullable = false)
+    private int numOfSpeeds;
 
     @Column(name = "price", nullable = false)
     private double price;
 
+    @Column(name = "photo", nullable = false)
+    private String photo;
+
+    @Column(name = "description", nullable = false)
+    private String description;
 
     @ManyToMany(mappedBy = "bicycles")
     private List<Order> orders;

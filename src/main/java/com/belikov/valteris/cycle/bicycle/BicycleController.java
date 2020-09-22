@@ -2,6 +2,7 @@ package com.belikov.valteris.cycle.bicycle;
 
 import com.belikov.valteris.cycle.bicycle.model.Bicycle;
 import lombok.AllArgsConstructor;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -29,9 +30,16 @@ public class BicycleController {
         return view; //could be changed to any appropriate string;*/
     }
 
-    @GetMapping("/all")
-    public List<Bicycle> getBicycles() {
-        return bicycleService.getAll();
+    @GetMapping("/bicycles/all")
+    public String getBicycles() {
+        final List<Bicycle> bicycleList = bicycleService.getAll();
+        JSONObject json = new JSONObject();
+
+        json.put("totalPages", 2);
+        json.put("currentPage", 1);
+        json.put("bicycles", bicycleList);
+
+        return json.toString();
     }
 
     @GetMapping("/{id}")
