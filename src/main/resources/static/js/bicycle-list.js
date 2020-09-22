@@ -2,12 +2,17 @@ import {getBicycleTemplate} from './bicycle-item-template.js';
 import {getPaginationTemplate} from './pagination-template.js';
 
 window.addEventListener('load', function () {
-    getBicyclesFromServer("/bicycleList/all");
+    getBicyclesFromServer("/bicycles/all/page/1");
+    // getBicyclesFromServer("/bicycles/all");
 })
 
-function getBicyclesFromServer(url) {
+export function getBicyclesFromServer(url) {
     $.get(url, function (data) {
+        console.log("data", data);
+        console.log("type of data", typeof (data));
         let dataObject = JSON.parse(data);
+        console.log("dataObject", dataObject);
+        console.log("type of dataObject", typeof (dataObject));
         fillTable(dataObject.bicycles || []);
         // fillTable(data.bicycles || []);
         fillPagination(dataObject.totalPages, dataObject.currentPage);
