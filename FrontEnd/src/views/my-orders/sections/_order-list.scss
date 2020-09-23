@@ -1,0 +1,120 @@
+.section-1 {
+  padding: 4rem 0;
+}
+
+.my-orders {
+  h1 {
+    padding: 50px;
+  }
+
+  .orders-title span {
+    padding-bottom: 7px;
+    border-bottom: 5px #05a081 solid;
+  }
+
+  .order-item {
+    background-color: #ffae071a;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, .2), 0 1px 2px 0 rgba(0, 0, 0, .2), 0 1px 4px 0 rgba(0, 0, 0, .2);
+
+    .right-block {
+      float: right;
+    }
+
+    .info {
+      div {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      .status {
+        font-weight: bold;
+      }
+
+      .price {
+        font-weight: bold;
+        margin-right: 10px;
+        color: $ocean;
+      }
+    }
+
+    .order-dish-items {
+      font-size: 15px;
+      font-weight: normal;
+      vertical-align: text-top;
+      margin-right: 6px;
+      background-color: $ocean;
+    }
+
+    .double-arrow {
+      font-size: 25px;
+      vertical-align: text-top;
+      color: #555;
+      transition-duration: 0.2s;
+    }
+
+    //todo
+    a[aria-expanded=true] .double-arrow {
+      transform: rotate(90deg);
+    }
+
+    .created-at {
+      color: #555;
+      font-size: 17px;
+      font-style: italic;
+    }
+
+    .info-list {
+      padding: 10px;
+
+      img {
+        display: inline-block;
+        width: 219px;
+      }
+
+      .info-list-item {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+        max-width: 240px;
+        vertical-align: top;
+        border: 1px solid #5454544f;
+        background-color: #ffffff;
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.12), 0 6px 10px 0 rgba(0,0,0,.12), 0 1px 18px 0 rgba(0,0,0,.12);
+
+        p{
+          color: #6b6b6b;
+          font-size: 15px;
+          margin-bottom: 7px;
+        }
+      }
+
+      .dish-name {
+        display: block;
+        color: #777;
+      }
+
+      .info-list__item-price {
+        font-size: 17px;
+
+        .info-list__item-price__items {
+          color: #555;
+          font-weight: bold;
+        }
+        .info-list__item-price__cost {
+          color: $ocean;
+          font-weight: bold;
+        }
+      }
+    }
+    .divider {
+      display: block;
+      width: 100px;
+      height: 1px;
+      background: $ocean;
+      margin: 10px auto;
+    }
+  }
+}

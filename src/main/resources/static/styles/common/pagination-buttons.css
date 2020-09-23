@@ -11,6 +11,6 @@
   color: #05a081;
 }
 
-.my-pagination .page-item .page-link .disabled {
+.my-pagination .page-item.disabled .page-link {
   color: #6b6b6b;
 }

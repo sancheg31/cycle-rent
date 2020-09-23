@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html lang="en">
 <head>
+  <title>Bicycle Rent</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="icon" type="image/x-icon" href="images/logos/icon.png" />
-  <title>Bicycle Rent</title>
-  <!-- Font Awesome icons (free version)-->
-  <link href="libs/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet" />
-  <!-- Google fonts-->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-  <!-- Core theme CSS (includes Bootstr0 ap)-->
-  <link rel="stylesheet" href="libs/bootstrap-4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-  <link href="styles/common/navigation.css" rel="stylesheet"/>
-  <link href="styles/common/footer.css" rel="stylesheet"/>
-  <link href="styles/common/masthead.css" rel="stylesheet"/>
-  <link href="styles/index.css" rel="stylesheet" />
-</head>
+<link rel="icon" href="/img/favicon.png"></head>
 <body id="page-top">
-<!-- Navigation-->
-<div th:insert="common/navigation :: navigation"></div>
-<!-- Masthead-->
-<header class="masthead">
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
   <div class="container">
-    <div class="masthead-subheading">Welcome To Our Store!</div>
-    <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-    <a class="btn btn-ocean btn-xl text-uppercase js-scroll-trigger" href="#services">Choose bicycle</a>
+    <a class="navbar-brand js-scroll-trigger" href="/"><img src="/img/logo.png" alt="" /></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <em class="fas fa-bars ml-1"></em>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item"><a class="nav-link" th:href="@{/bicycles}">Bicycles</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/myOrders}">My orders</a></li>
+        <li class="nav-item"><a class="nav-link" href="">Basket</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><em class="fas fa-sign-out-alt"></em></a></li>
+      </ul>
+    </div>
   </div>
-</header>
-<!-- Services-->
-<section class="page-section" id="services">
+</nav>
+
+
+  <header class="master-head">
+    <div class="container">
+      <div class="masthead-subheading">Welcome To Our Store!</div>
+      <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+      <a class="btn btn-ocean btn-xl text-uppercase js-scroll-trigger" th:href="@{/bicycles}">Choose bicycle</a>
+    </div>
+  </header>
+
+  <section class="page-section" id="services">
   <div class="container">
     <div class="text-center">
       <h2 class="section-heading text-uppercase">Services</h2>
@@ -64,8 +72,8 @@
     </div>
   </div>
 </section>
-<!-- About-->
-<section class="page-section bg-light" id="about">
+
+  <section class="page-section bg-light" id="about">
   <div class="container">
     <div class="text-center">
       <h2 class="section-heading text-uppercase">How to rent a bike</h2>
@@ -73,7 +81,7 @@
     </div>
     <ul class="timeline">
       <li>
-        <div class="timeline-image"><img class="rounded-circle img-fluid" src="images/about/bicycles.jpeg" alt="" /></div>
+        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/img/bicycles.jpeg" alt="" /></div>
         <div class="timeline-panel">
           <div class="timeline-heading">
             <h4>1</h4>
@@ -83,7 +91,7 @@
         </div>
       </li>
       <li class="timeline-inverted">
-        <div class="timeline-image"><img class="rounded-circle img-fluid" src="images/about/bike.jpg" alt="" /></div>
+        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/img/bike.jpg" alt="" /></div>
         <div class="timeline-panel">
           <div class="timeline-heading">
             <h4>2</h4>
@@ -93,7 +101,7 @@
         </div>
       </li>
       <li>
-        <div class="timeline-image"><img class="rounded-circle img-fluid" src="images/about/details.jpg" alt="" /></div>
+        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/img/details.jpg" alt="" /></div>
         <div class="timeline-panel">
           <div class="timeline-heading">
             <h4>3</h4>
@@ -103,7 +111,7 @@
         </div>
       </li>
       <li class="timeline-inverted">
-        <div class="timeline-image"><img class="rounded-circle img-fluid" src="images/about/cash.jpg" alt="" /></div>
+        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/img/cash.jpg" alt="" /></div>
         <div class="timeline-panel">
           <div class="timeline-heading">
             <h4>4</h4>
@@ -126,8 +134,8 @@
     </ul>
   </div>
 </section>
-<!-- Team-->
-<section class="page-section" id="team">
+
+  <section class="page-section" id="team">
   <div class="container">
     <div class="text-center">
       <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
@@ -137,7 +145,7 @@
       <div class="col-lg-2"></div>
       <div class="col-lg-4">
         <div class="team-member">
-          <img class="mx-auto rounded-circle" src="images/team/1.jpg" alt="" />
+          <img class="mx-auto rounded-circle" src="/img/1.jpg" alt="" />
           <h4>Elizabeth Valteris</h4>
           <p class="text-muted">Lead Developer</p>
           <a class="btn btn-dark btn-social mx-2" href=""><em class="fab fa-twitter"></em></a>
@@ -147,12 +155,12 @@
       </div>
       <div class="col-lg-4">
         <div class="team-member">
-          <img class="mx-auto rounded-circle" src="images/team/2.jpg" alt="" />
+          <img class="mx-auto rounded-circle" src="/img/2.jpg" alt="" />
           <h4>Yuriy Belikov</h4>
           <p class="text-muted">Lead Developer</p>
-            <a class="btn btn-dark btn-social mx-2" href=""><em class="fab fa-twitter"></em></a>
-            <a class="btn btn-dark btn-social mx-2" href=""><em class="fab fa-facebook-f"></em></a>
-            <a class="btn btn-dark btn-social mx-2" href=""><em class="fab fa-linkedin-in"></em></a>
+          <a class="btn btn-dark btn-social mx-2" href=""><em class="fab fa-twitter"></em></a>
+          <a class="btn btn-dark btn-social mx-2" href=""><em class="fab fa-facebook-f"></em></a>
+          <a class="btn btn-dark btn-social mx-2" href=""><em class="fab fa-linkedin-in"></em></a>
         </div>
       </div>
       <div class="col-lg-2"></div>
@@ -162,20 +170,20 @@
     </div>
   </div>
 </section>
-<!-- Contact-->
-<section class="page-section" id="contact">
+
+  <section class="page-section" id="map">
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.09934019958!2d30.472079985159706!3d50.38334666484144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xed290a5326a634e3!2sFaculty%20of%20Computer%20Science%20and%20Cybernetics%20Taras%20Shevchenko%20National%20University%20of%20Kyiv!5e0!3m2!1sru!2sua!4v1599241072005!5m2!1sru!2sua"
           class="contacts-map" style="border:0;" allowfullscreen="" title="Map"></iframe>
 </section>
-<!-- Footer-->
-<div th:insert="common/footer :: footer"></div>
 
-<!-- Bootstrap core JS-->
-<script src="libs/jquery/jquery-3.4.1.min.js"></script>
-<script src="libs/bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script>
-<!-- Third party plugin JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<!-- Core theme JS-->
-<script src="js/index.js"></script>
-</body>
+  <footer th:fragment="footer" class="footer py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-lg-right">Copyright © <span style="color: #05a081">Bicycle Rent </span> 2020</div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/js/vendors.js"></script><script src="/js/index.js"></script></body>
 </html>
