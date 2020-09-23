@@ -1,0 +1,21 @@
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import '../../scss/styles.scss';
+
+// Components
+@import "../../scss/components/buttons.scss";
+@import "../../scss/components/navbar.scss";
+
+// Sections
+@import "../../common/sections/master-head.scss";
+@import "./sections/_product-list.scss";
+@import "./sections/_filter-buttons.scss";
+@import "src/common/pagination/pagination-buttons.scss";
+@import "../../common/footer/footer.scss";
+
+header.master-head {
+  background: linear-gradient(
+      180deg, rgba(172, 172, 172, .9) 20%,
+      rgba(172, 172, 172, .4) 50%,
+      rgba(83, 83, 83, .3)) 30%,
+  url(../../../assets/images/bicycle-list-bg.webp) top no-repeat;
+}

@@ -1,0 +1,17 @@
+.my-pagination {
+  margin-top: 20px;
+
+  .page-number {
+    margin: 12px 15px;
+    font-size: 20px;
+  }
+
+  .page-item {
+    .page-link {
+      color: $ocean;
+    }
+    &.disabled .page-link {
+      color: #6b6b6b;
+    }
+  }
+}

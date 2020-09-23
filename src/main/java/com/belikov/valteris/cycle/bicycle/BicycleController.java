@@ -27,7 +27,7 @@ public class BicycleController {
 
     @GetMapping("/bicycles")
     public String bicyclesListPage() {
-        return "bicycle_list";
+        return "bicycle-list";
     }
 
     @GetMapping("/bicycles/all/page/{numberOfPage}")

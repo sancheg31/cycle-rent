@@ -22,3 +22,5 @@ target/
 
 src/main/resources/static/libs/**
 src/main/resources/application.properties
+FrontEnd/node_modules
+FrontEnd/package-lock.json
