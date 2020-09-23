@@ -18,7 +18,7 @@
 --
 -- Table structure for table `bicycle_detail`
 --
-
+USE `bicycle_rent`;
 DROP TABLE IF EXISTS `bicycle_detail`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;

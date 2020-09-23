@@ -57,3 +57,28 @@ header.masthead {
     margin-bottom: 40px;
     margin-left: 20px;
 }
+
+.detail-row {
+    padding-left: 0px;
+}
+
+.details-container {
+    margin-left: 10px;
+}
+
+.custom-control {
+    margin-right: 10px;
+}
+
+.details-column {
+    margin-left: 10px;
+    width: 80%
+}
+
+.add-to-cart-btn {
+    width: 100px;
+}
+
+.price {
+    color: #088623af;
+}
