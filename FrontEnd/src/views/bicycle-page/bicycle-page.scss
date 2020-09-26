@@ -1,0 +1,20 @@
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import '../../scss/styles.scss';
+
+// Components
+@import "../../scss/components/buttons.scss";
+@import "../../scss/components/navbar.scss";
+
+
+//Sections
+@import '../../common/sections/master-head';
+@import "./sections/bicycle-info.scss";
+@import "./sections/cart-area.scss";
+@import "./sections/details-container.scss";
+@import "./sections/rent-options.scss";
+@import "../../common/footer/footer.scss";
+
+
+header.master-head {
+    background-image: url("../../../assets/images/forest-dark.jpeg");
+}

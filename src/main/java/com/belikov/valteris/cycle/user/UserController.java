@@ -22,7 +22,7 @@ public class UserController {
 
     @GetMapping("/bicycle")
     public String showBicyclePage() {
-        return "bicycle";
+        return "bicycle-page";
     }
 
     @GetMapping("/cart")
