@@ -1,0 +1,36 @@
+{
+  "totalPages": 2,
+  "currentPage": 2,
+  "bicycles": [
+    {
+      "id": 1,
+      "name": "Aston Martin One-77",
+      "type": "Mountain",
+      "weight": 2.0,
+      "price": 39.0,
+      "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+      "photo": "01.jpg",
+      "availability": true
+    },
+    {
+      "id": 2,
+      "name": "Velik",
+      "type": "Mountain",
+      "weight": 1.8,
+      "price": 45.0,
+      "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+      "photo": "02.jpg",
+      "availability": true
+    },
+    {
+      "id": 3,
+      "name": "Bike Now",
+      "type": "City",
+      "weight": 5.5,
+      "price": 22.5,
+      "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+      "photo": "03.jpg",
+      "availability": false
+    }
+  ]
+}
