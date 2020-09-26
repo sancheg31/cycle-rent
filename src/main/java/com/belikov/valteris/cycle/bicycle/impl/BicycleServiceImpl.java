@@ -20,7 +20,7 @@ import static com.belikov.valteris.cycle.util.ServiceUtil.getNumberOfPages;
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class BicycleServiceImpl implements BicycleService {
 
-    private static final int ITEMS_PER_PAGE = 3;
+    private static final int ITEMS_PER_PAGE = 6;
     private final BicycleRepository bicycleRepository;
 
     @Override
