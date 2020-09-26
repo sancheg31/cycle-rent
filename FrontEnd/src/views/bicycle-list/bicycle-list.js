@@ -7,14 +7,14 @@ import {fillTable} from './fill-table';
 import {fillPagination} from './fill-table';
 
 window.addEventListener('load', function () {
-  getBicyclesFromServer("/json/bicycles.json");
+  getBicyclesFromServer("/bicycles/all/page/1");
 })
 
 function getBicyclesFromServer (url) {
   $.get(url, function (data) {
-    console.log("type of data:", typeof (data));
-    fillTable(data.bicycles || []);
-    fillPagination(data.totalPages, data.currentPage);
+    let dataObject = JSON.parse(data);
+    fillTable(dataObject.bicycles || []);
+    fillPagination(dataObject.totalPages, dataObject.currentPage);
   })
 }
 

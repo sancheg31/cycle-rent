@@ -13,9 +13,5 @@
 @import "../../common/footer/footer.scss";
 
 header.master-head {
-  background: linear-gradient(
-      180deg, rgba(172, 172, 172, .9) 20%,
-      rgba(172, 172, 172, .4) 50%,
-      rgba(83, 83, 83, .3)) 30%,
-  url(../../../assets/images/bicycle-list-bg.webp) top no-repeat;
+  background-image: url("../../../assets/images/forest-dark.jpeg");
 }
