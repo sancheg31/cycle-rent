@@ -27,11 +27,11 @@ public class UserController {
 
     @GetMapping("/cart")
     public String showCartPage() {
-        return "cart";
+        return "cart-page";
     }
 
     @GetMapping("/checkout")
     public String showCheckoutPage() {
-        return "checkout";
+        return "checkout-page";
     }
 }

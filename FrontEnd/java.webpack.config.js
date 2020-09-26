@@ -19,7 +19,8 @@ module.exports = {
     bicycleList: './src/views/bicycle-list/bicycle-list.js',
     myOrders: './src/views/my-orders/my-orders.js',
     bicyclePage: './src/views/bicycle-page/bicycle-page.js',
-    cartPage: './src/views/cart-page/cart-page.js'
+    cartPage: './src/views/cart-page/cart-page.js',
+    checkoutPage: './src/views/checkout-page/checkout-page.js'
   },
   output: {
     path: path.resolve(__dirname, '../src/main/resources/static/'),
@@ -206,6 +207,13 @@ module.exports = {
       filename: '../templates/cart-page.html',
       template: './src/views/cart-page/cart-page.html',
       chunks: ['vendors', 'cartPage']
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: '../templates/checkout-page.html',
+      template: './src/views/checkout-page/checkout-page.html',
+      chunks: ['vendors', 'checkoutPage']
     })
+
   ]
 };
