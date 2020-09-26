@@ -16,7 +16,8 @@ module.exports = {
   entry: {
     index: './src/views/index/index.js',
     bicycleList: './src/views/bicycle-list/bicycle-list.js',
-    myOrders: './src/views/my-orders/my-orders.js'
+    myOrders: './src/views/my-orders/my-orders.js',
+    login: './src/views/login/login.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -187,6 +188,13 @@ module.exports = {
       template: './src/views/my-orders/my-orders.html',
       favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'myOrders']
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: 'login.html',
+      template: './src/views/login/login.html',
+      favicon: './assets/images/logos/icon.png',
+      chunks: ['vendors', 'login']
     })
 
   ]
