@@ -18,7 +18,8 @@ module.exports = {
     index: './src/views/index/index.js',
     bicycleList: './src/views/bicycle-list/bicycle-list.js',
     myOrders: './src/views/my-orders/my-orders.js',
-    bicyclePage: './src/views/bicycle-page/bicycle-page.js'
+    bicyclePage: './src/views/bicycle-page/bicycle-page.js',
+    cartPage: './src/views/cart-page/cart-page.js'
   },
   output: {
     path: path.resolve(__dirname, '../src/main/resources/static/'),
@@ -194,11 +195,17 @@ module.exports = {
       template: './src/views/my-orders/my-orders.html',
       chunks: ['vendors', 'myOrders']
     }),
+
     new HtmlWebpackPlugin({
       filename: '../templates/bicycle-page.html',
       template: './src/views/bicycle-page/bicycle-page.html',
       chunks: ['vendors', 'bicyclePage']
-    })
+    }),
 
+    new HtmlWebpackPlugin({
+      filename: '../templates/cart-page.html',
+      template: './src/views/cart-page/cart-page.html',
+      chunks: ['vendors', 'cartPage']
+    })
   ]
 };

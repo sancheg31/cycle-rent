@@ -1,0 +1,118 @@
+<div class="shopping-cart">
+    <div class="px-4 px-lg-0">
+
+        <div class="pb-5">
+            <div class="cart-container container">
+                <div class="cart-content row">
+                    <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+
+                        <!-- Shopping cart table -->
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col" class="border-0 bg-light">
+                                        <div class="p-2 px-3 text-uppercase">Product</div>
+                                    </th>
+                                    <th scope="col" class="border-0 bg-light">
+                                        <div class="py-2 text-uppercase">Price</div>
+                                    </th>
+                                    <th scope="col" class="border-0 bg-light">
+                                        <div class="py-2 text-uppercase">Quantity</div>
+                                    </th>
+                                    <th scope="col" class="border-0 bg-light">
+                                        <div class="py-2 text-uppercase">Remove</div>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row" class="border-0">
+                                        <div class="p-2">
+                                            <img src="../../../assets/images/bicycles/03.jpg" alt="" width="70"
+                                                 class="img-fluid rounded shadow-sm">
+                                            <div class="ml-3 d-inline-block align-middle">
+                                                <h5 class="mb-0"><a href="#"
+                                                                    class="text-dark d-inline-block align-middle">Bike1</a>
+                                                </h5>
+                                                <span class="text-muted font-weight-normal font-italic">Rent time: 12:00 - 13:00</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="border-0 align-middle"><strong>1h * 79.00 UAH</strong></td>
+                                    <td class="align-middle"><input type="number" id="number"
+                                                                    class="form-control quantity-input" value="1"
+                                                                    style="width: 80px"/></td>
+                                    <td class="border-0 align-middle"><a href="#" class="text-dark"><i
+                                            class="fa fa-trash"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="p-2">
+                                            <img src="../../../assets/images/bicycles/03.jpg" alt="" width="70"
+                                                 class="img-fluid rounded shadow-sm">
+                                            <div class="ml-3 d-inline-block align-middle">
+                                                <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Bike2</a>
+                                                </h5>
+                                                <span class="text-muted font-weight-normal font-italic">Rent time: 12:00 - 13:00</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="align-middle"><strong>1h * 79.00 UAH</strong></td>
+                                    <td class="align-middle"><input type="number" id="number"
+                                                                    class="form-control quantity-input" value="1"
+                                                                    style="width: 80px"/></td>
+                                    <td class="align-middle"><a href="#" class="text-dark"><i
+                                            class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="p-2">
+                                            <img src="../../../assets/images/bicycles/03.jpg" alt="" width="70"
+                                                 class="img-fluid rounded shadow-sm">
+                                            <div class="ml-3 d-inline-block align-middle">
+                                                <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Bike3</a>
+                                                </h5>
+                                                <span class="text-muted font-weight-normal font-italic">Rent time: 12:00 - 13:00</span>
+                                            </div>
+                                        </div>
+                                    <td class="align-middle"><strong>1h * 79.00 UAH</strong></td>
+                                    <td class="align-middle"><input type="number" id="number"
+                                                                    class="form-control quantity-input" value="1"
+                                                                    style="width: 80px"/></td>
+                                    <td class="align-middle"><a href="#" class="text-dark"><i
+                                            class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- End -->
+                    </div>
+                </div>
+
+                <div class="row py-5 p-4 bg-white rounded shadow-sm">
+                    <div class="col-lg-6"></div>
+                    <div class="col-lg-6">
+                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary</div>
+                        <div class="p-4">
+                            <p class="font-italic mb-4">For each hour after overusing time limit you have to pay 75% of
+                                rent price per hour</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="d-flex justify-content-between py-3 border-bottom"><strong
+                                        class="text-muted">Total</strong>
+                                    <h5 class="font-weight-bold">390.00 UAH</h5>
+                                </li>
+                            </ul>
+                            <a th:href="@{/checkout}" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to
+                                checkout</a>
+                            <a th:href="@{/bicycles}" class="btn btn-dark rounded-pill py-2 btn-block">Return to
+                                list</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
