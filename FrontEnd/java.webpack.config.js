@@ -19,7 +19,10 @@ module.exports = {
     bicycleList: './src/views/bicycle-list/bicycle-list.js',
     myOrders: './src/views/my-orders/my-orders.js',
     login: './src/views/login/login.js',
-    signUp: './src/views/signUp/signUp.js'
+    signUp: './src/views/signUp/signUp.js',
+    bicyclePage: './src/views/bicycle-page/bicycle-page.js',
+    cartPage: './src/views/cart-page/cart-page.js',
+    checkoutPage: './src/views/checkout-page/checkout-page.js'
   },
   output: {
     path: path.resolve(__dirname, '../src/main/resources/static/'),
@@ -208,6 +211,24 @@ module.exports = {
       template: './src/views/signUp/signUp.html',
       favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'signUp']
+     
+    }),
+
+    new HtmlWebpackPlugin ({
+      filename: '../templates/bicycle-page.html',
+      template: './src/views/bicycle-page/bicycle-page.html',
+      chunks: ['vendors', 'bicyclePage']
+    }),
+    new HtmlWebpackPlugin({
+      filename: '../templates/cart-page.html',
+      template: './src/views/cart-page/cart-page.html',
+      chunks: ['vendors', 'cartPage']
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: '../templates/checkout-page.html',
+      template: './src/views/checkout-page/checkout-page.html',
+      chunks: ['vendors', 'checkoutPage']
     })
 
   ]
