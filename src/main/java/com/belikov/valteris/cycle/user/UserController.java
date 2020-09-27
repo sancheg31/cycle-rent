@@ -10,6 +10,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserController {
     private final UserService userService;
 
+    @GetMapping("/login")
+    public String showLoginPage() {
+        return "login";
+    }
+
+    @GetMapping("/signUp")
+    public String showSignUpPage() {
+        return "signUp";
+    }
+
     @GetMapping("/index")
     public String showHomePage() {
         return "index";

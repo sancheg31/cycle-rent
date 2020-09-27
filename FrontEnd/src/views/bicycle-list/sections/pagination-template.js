@@ -3,11 +3,11 @@ export const getPaginationTemplate =
     `<nav>
   <ul class="pagination pagination-lg justify-content-center my-pagination">
     <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="true">Previous</a>
+      <div id="previousButton" class="page-link">Previous</div>
     </li>
     <li class="page-item page-number"> ${currentPage}/${totalPages} </li>
     <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
-      <a class="page-link" href="">Next</a>
+      <div id="nextButton" class="page-link">Next</div>
     </li>
   </ul>
 </nav>
