@@ -14,14 +14,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    // todo sign up - remove
-    flex-direction: row-reverse;
 
     .login100-form {
       width: 50%;
       display: flex;
       flex-wrap: wrap;
-      padding: 290px 65px 40px 65px;
+      padding: 157px 65px 40px 65px;
 
       .login100-form-title {
         font-family: $font-family-script;
@@ -43,15 +41,6 @@
         width: 100%;
         position: relative;
         border: 1px solid #e6e6e6;
-      }
-
-      .rs1-wrap-input100,
-      .rs2-wrap-input100 {
-        width: 50%;
-      }
-
-      .rs2-wrap-input100 {
-        border-left: none;
       }
 
       .m-b-20 {
@@ -150,7 +139,7 @@
       .social-buttons {
         text-align: center;
         margin-top: 15px;
-        margin-bottom: 210px;
+        margin-bottom: 120px;
         a {
           text-decoration: none;
           color: #555555;
@@ -186,7 +175,7 @@
 
     }
     .login100-more {
-      background-image: url("../../../assets/images/login-bg.jpg");
+      background-image: url("../../../assets/images/signUp-bg.jpeg");
       width: 50%;
       background-repeat: no-repeat;
       background-size: cover;
