@@ -6,7 +6,7 @@ require('../../js/scrolling');
 import {fillTable} from './fill-table';
 import {fillPagination} from './fill-table';
 
-let sortBy = 'DEFAULT', bicycleType = 'ALL', pageNumber = 1;
+let sortBy = 'PRICE_UP', bicycleType = 'ALL', pageNumber = 1;
 
 window.addEventListener('load', function () {
     const url = "/bicycles/all/sort/" + sortBy + "/type/" + bicycleType + "/page/" + pageNumber;
@@ -40,24 +40,6 @@ $('#dropdownType').change(e => {
         getBicyclesFromServer(url);
     }
 })
-
-// $('#previousButton').click(function (e) {
-//     e.preventDefault();
-//     console.log('aaa')
-//     if (pageNumber > 1) {
-//         const url = "/bicycles/all/sort/" + sortBy + "/type/" + bicycleType + "/page/" + (pageNumber - 1);
-//         console.log("previous", url);
-//         getBicyclesFromServer(url);
-//     }
-// })
-// console.log('aaaaaaaaaaaaaaaaaaaaaaaa')
-// $('#nextButton').click(function (e) {
-//     e.preventDefault();
-//     console.log('bbb')
-//     const url = "/bicycles/all/sort/" + sortBy + "/type/" + bicycleType + "/page/" + (pageNumber + 1);
-//     console.log("next", url);
-//     getBicyclesFromServer(url);
-// })
 
 export function navActions() {
     $('#previousButton').click(() => {

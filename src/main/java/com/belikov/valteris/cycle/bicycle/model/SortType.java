@@ -1,7 +1,6 @@
 package com.belikov.valteris.cycle.bicycle.model;
 
 public enum SortType {
-    DEFAULT("Default"),
     PRICE_UP("Price Up"),
     PRICE_DOWN("Price down"),
     WEIGHT_UP("Weight up"),
