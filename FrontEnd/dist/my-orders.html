@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Orders</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/icon.png"></head>
+<body id="page-top">
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="/"><img src="/img/logo.7e617a.png" alt="" /></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <em class="fas fa-bars ml-1"></em>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+<!--        <li class="nav-item"><a class="nav-link" th:href="@{/bicycles}">Bicycles</a></li>-->
+        <li class="nav-item"><a class="nav-link active" href="/bicycle-list.html">Bicycles</a></li>
+        <li class="nav-item"><a class="nav-link" href="/my-orders.html">My orders</a></li>
+        <li class="nav-item"><a class="nav-link" href="/cart-page.html">Basket</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><em class="fas fa-sign-out-alt"></em></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="section-1">
+  <div class="container my-orders">
+    <div class=" d-flex justify-content-between">
+      <h1 class="orders-title"><span>My Orders:</span></h1>
+    </div>
+
+
+    <div>
+      <div class="row">
+        <div class="col col-12 mb-5">
+          <div class="order-item">
+            <div class="info">
+              <div class="right-block">
+                <div class="price">
+                  <span>1200</span>
+                  UAH
+                </div>
+              </div>
+              <div>
+                <a data-toggle="collapse" href="#collapseDishes-3" aria-expanded="false">
+                  <span class="order-dish-items badge badge-info"># 3</span><em
+                  class="double-arrow fas fa-angle-double-right"></em>
+                </a>
+              </div>
+              <div><span>5</span> item(s)</div>
+              <div class="created-at">2020-04-18</div>
+            </div>
+            <div class="info-list collapse" id="collapseDishes-3">
+              <div class="info-list-item">
+                <a class="dish-name" href="dish?dishId=21">
+                  <img src="/img/01.001cad.jpg" alt="Vegan chocolate ice cream"/>
+                  <span>Vegan chocolate ice cream</span>
+                </a>
+                <div class="divider"></div>
+                <p class="rent-time">Rent time: 13:30 - 15:00</p>
+                <div class="info-list__item-price">
+                  Price:
+                  <span class="info-list__item-price__items">1.5 h</span> x
+                  <span class="info-list__item-price__cost">75.0 UAH</span> =
+                  <span class="info-list__item-price__cost">112.5</span>
+                </div>
+              </div>
+              <div class="info-list-item">
+                <a class="dish-name" href="dish?dishId=12">
+                  <img src="/img/02.2c12e8.jpg" alt="Summer Asian Slaw"/>
+                  <span>Summer Asian Slaw</span>
+                </a>
+                <div class="divider"></div>
+                <p class="rent-time">Rent time: 13:00 - 15:00</p>
+                <div class="info-list__item-price">
+                  Price:
+                  <span class="info-list__item-price__items">2 h</span> x
+                  <span class="info-list__item-price__cost">250.0 UAH</span> =
+                  <span class="info-list__item-price__cost">500.0</span>
+                </div>
+              </div>
+              <div class="info-list-item">
+                <a class="dish-name" href="dish?dishId=12">
+                  <img src="/img/02.2c12e8.jpg" alt="Summer Asian Slaw"/>
+                  <span>Summer Asian Slaw</span>
+                </a>
+                <div class="divider"></div>
+                <p class="rent-time">Rent time: 13:00 - 15:00</p>
+                <div class="info-list__item-price">
+                  Price:
+                  <span class="info-list__item-price__items">2 h</span> x
+                  <span class="info-list__item-price__cost">250.0 UAH</span> =
+                  <span class="info-list__item-price__cost">500.0</span>
+                </div>
+              </div>
+              <div class="info-list-item">
+                <a class="dish-name" href="dish?dishId=16">
+                  <img src="/img/03.42ae9f.jpg" alt="Berry smoothie"/>
+                  <span>Berry smoothie</span>
+                </a>
+                <div class="divider"></div>
+                <div class="info-list__item-price">
+                  <span class="info-list__item-price__items">1</span> x
+                  <span class="info-list__item-price__cost">150.0 UAH</span> =
+                  <span class="info-list__item-price__cost">150.0</span>
+                </div>
+              </div>
+              <div class="info-list-item">
+                <a class="dish-name" href="lunch?lunchId=3">
+                  <img src="/img/04.223a94.jpg" alt="Nutritious vegetarian lunch"/>
+                  <span>Nutritious vegetarian lunch</span>
+                </a>
+                <div class="divider"></div>
+                <div class="info-list__item-price">
+                  <span class="info-list__item-price__items">1</span> x
+                  <span class="info-list__item-price__cost">475 UAH</span> =
+                  <span class="info-list__item-price__cost">475</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row">
+        <div class="col col-12 mb-5">
+          <div class="order-item">
+            <div class="info">
+              <div class="right-block">
+                <div class="status">
+                  <span class="badge badge-info">Archive</span>
+                </div>
+                <div class="price">
+                  <span>5895</span>
+                  UAH
+                </div>
+              </div>
+              <div>
+                <a data-toggle="collapse" href="#collapseDishes-5" aria-expanded="false">
+                  <span class="order-dish-items badge badge-info"># 5</span><em
+                  class="double-arrow fas fa-angle-double-right"></em>
+                </a>
+              </div>
+              <div><span>2</span> item(s)</div>
+              <div class="created-at">2020-05-20</div>
+            </div>
+            <div class="info-list collapse" id="collapseDishes-5">
+              <div class="info-list-item">
+                <a class="dish-name" href="dish?dishId=12">
+                  <img src="/img/05.a781f2.jpg" alt="Summer Asian Slaw"/>
+                  <span>Summer Asian Slaw</span>
+                </a>
+                <div class="divider"></div>
+                <p class="rent-time">Rent time: 13:00 - 15:00</p>
+                <div class="info-list__item-price">
+                  Price:
+                  <span class="info-list__item-price__items">2 h</span> x
+                  <span class="info-list__item-price__cost">250.0 UAH</span> =
+                  <span class="info-list__item-price__cost">500.0</span>
+                </div>
+              </div>
+              <div class="info-list-item">
+                <a class="dish-name" href="dish?dishId=12">
+                  <img src="/img/06.cb7ec4.jpg" alt="Summer Asian Slaw"/>
+                  <span>Summer Asian Slaw</span>
+                </a>
+                <div class="divider"></div>
+                <p class="rent-time">Rent time: 13:00 - 15:00</p>
+                <div class="info-list__item-price">
+                  Price:
+                  <span class="info-list__item-price__items">2 h</span> x
+                  <span class="info-list__item-price__cost">250.0 UAH</span> =
+                  <span class="info-list__item-price__cost">500.0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row">
+        <div class="col col-12 mb-5">
+          <div class="order-item">
+            <div class="info">
+              <div class="right-block">
+                <div class="status">
+                  <span class="badge badge-info">Archive</span>
+                </div>
+                <div class="price">
+                  <span>2155</span>
+                  UAH
+                </div>
+              </div>
+              <div>
+                <a data-toggle="collapse" href="#collapseDishes-6" aria-expanded="false">
+                  <span class="order-dish-items badge badge-info"># 6</span><em
+                  class="double-arrow fas fa-angle-double-right"></em>
+                </a>
+              </div>
+              <div><span>3</span> item(s)</div>
+              <div class="created-at">2020-09-12</div>
+            </div>
+            <div class="info-list collapse" id="collapseDishes-6">
+              <div class="info-list-item">
+                <a class="dish-name" href="dish?dishId=12">
+                  <img src="/img/07.b0270f.jpg" alt="Summer Asian Slaw"/>
+                  <span>Summer Asian Slaw</span>
+                </a>
+                <div class="divider"></div>
+                <p class="rent-time">Rent time: 13:00 - 15:00</p>
+                <div class="info-list__item-price">
+                  Price:
+                  <span class="info-list__item-price__items">2 h</span> x
+                  <span class="info-list__item-price__cost">250.0 UAH</span> =
+                  <span class="info-list__item-price__cost">500.0</span>
+                </div>
+              </div>
+              <div class="info-list-item">
+                <a class="dish-name" href="dish?dishId=12">
+                  <img src="/img/08.9b4a74.jpg" alt="Summer Asian Slaw"/>
+                  <span>Summer Asian Slaw</span>
+                </a>
+                <div class="divider"></div>
+                <p class="rent-time">Rent time: 13:00 - 15:00</p>
+                <div class="info-list__item-price">
+                  Price:
+                  <span class="info-list__item-price__items">2 h</span> x
+                  <span class="info-list__item-price__cost">250.0 UAH</span> =
+                  <span class="info-list__item-price__cost">500.0</span>
+                </div>
+              </div>
+              <div class="info-list-item">
+                <a class="dish-name" href="lunch?lunchId=4">
+                  <img src="/img/05.a781f2.jpg" alt="Easter holiday lunch"/>
+                  <span>Easter holiday lunch</span>
+                </a>
+                <div class="divider"></div>
+                <div class="info-list__item-price">
+                  <span class="info-list__item-price__items">1</span> x
+                  <span class="info-list__item-price__cost">1590 UAH</span> =
+                  <span class="info-list__item-price__cost">1590</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav id="paginationId">
+  <ul class="pagination pagination-lg justify-content-center my-pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item page-number"> 1/3 </li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+  </div>
+</section>
+
+<footer class="footer py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-lg-right">Copyright © <span style="color: #05a081">Bicycle Rent </span> 2020</div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/js/vendors.985e95.js"></script><script src="/js/myOrders.985e95.js"></script></body>
+</html>

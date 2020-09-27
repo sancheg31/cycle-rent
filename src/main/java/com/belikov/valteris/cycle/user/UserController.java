@@ -32,16 +32,16 @@ public class UserController {
 
     @GetMapping("/bicycle")
     public String showBicyclePage() {
-        return "bicycle";
+        return "bicycle-page";
     }
 
     @GetMapping("/cart")
     public String showCartPage() {
-        return "cart";
+        return "cart-page";
     }
 
     @GetMapping("/checkout")
     public String showCheckoutPage() {
-        return "checkout";
+        return "checkout-page";
     }
 }
