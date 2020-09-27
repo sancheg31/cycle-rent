@@ -25,3 +25,5 @@ src/main/resources/application.properties
 FrontEnd/node_modules
 FrontEnd/package-lock.json
 FrontEnd/dist
+src/main/resources/static
+src/main/resources/templates
