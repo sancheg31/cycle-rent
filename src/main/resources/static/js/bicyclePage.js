@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([3,"vendors"]);
+/******/ 	deferredModules.push([5,"vendors"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -223,7 +223,7 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************************************************************************************!*\
   !*** multi (webpack)-dev-server/client?http://0.0.0.0:3000 ./src/views/bicycle-page/bicycle-page.js ***!
   \******************************************************************************************************/

@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([5,"vendors"]);
+/******/ 	deferredModules.push([7,"vendors"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -211,7 +211,7 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /*!********************************************************************************************************!*\
   !*** multi (webpack)-dev-server/client?http://0.0.0.0:3000 ./src/views/checkout-page/checkout-page.js ***!
   \********************************************************************************************************/

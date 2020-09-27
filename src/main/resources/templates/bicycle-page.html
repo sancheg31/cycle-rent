@@ -16,7 +16,7 @@
 
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="/"><img src="/img/logo.png" alt="" /></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -26,9 +26,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
-        <li class="nav-item"><a class="nav-link" th:href="@{/bicycles}">Bicycles</a></li>
-        <li class="nav-item"><a class="nav-link" th:href="@{/myOrders}">My orders</a></li>
-        <li class="nav-item"><a class="nav-link" th:href="@{/cart}">Basket</a></li>
+<!--        <li class="nav-item"><a class="nav-link" th:href="@{/bicycles}">Bicycles</a></li>-->
+        <li class="nav-item"><a class="nav-link active" href="/bicycle-list.html">Bicycles</a></li>
+        <li class="nav-item"><a class="nav-link" href="/my-orders.html">My orders</a></li>
+        <li class="nav-item"><a class="nav-link" href="/cart-page.html">Basket</a></li>
         <li class="nav-item"><a class="nav-link" href=""><em class="fas fa-sign-out-alt"></em></a></li>
       </ul>
     </div>
