@@ -1,6 +1,7 @@
 package com.belikov.valteris.cycle.bicycle;
 
 import com.belikov.valteris.cycle.bicycle.model.Bicycle;
+import com.belikov.valteris.cycle.bicycle.model.BicycleType;
 import com.belikov.valteris.cycle.bicycle.model.SortType;
 import lombok.AllArgsConstructor;
 import org.json.JSONObject;
@@ -16,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
@@ -30,41 +30,37 @@ public class BicycleController {
         return "bicycle-list";
     }
 
-    @GetMapping("/bicycles/all/page/{numberOfPage}")
+//    @GetMapping("/bicycles/all/page/{numberOfPage}")
+//    @ResponseBody
+//    public String getPageOfBicycles(@PathVariable int numberOfPage) {
+//        final Page<Bicycle> bicyclePage = bicycleService.findPage(numberOfPage);
+//        final int totalPages = bicyclePage.getTotalPages();
+//        numberOfPage = checkNumberOfPage(numberOfPage, totalPages);
+//
+//        return getJson(numberOfPage, bicyclePage, totalPages);
+//    }
+
+    @GetMapping("/bicycles/all/sort/{typeOfSort}/type/{bicycleType}/page/{numberOfPage}")
     @ResponseBody
-    public String getPageOfBicycles(@PathVariable int numberOfPage) {
-        final int totalPages = bicycleService.pageCount();
-        if(numberOfPage < 1 || numberOfPage > totalPages) {
-            numberOfPage = 1;
-        }
-        final Page<Bicycle> bicyclePage = bicycleService.findPage(numberOfPage);
+    public String getSortedPageOfBicycles(@PathVariable String typeOfSort,
+                                          @PathVariable String bicycleType, @PathVariable int numberOfPage) {
+        final Page<Bicycle> bicyclePage = bicycleService.findSortedPage(SortType.valueOf(typeOfSort),
+                BicycleType.valueOf(bicycleType), numberOfPage);
+        final int totalPages = bicyclePage.getTotalPages();
+        numberOfPage = checkNumberOfPage(numberOfPage, totalPages);
 
-        JSONObject json = new JSONObject();
-        json.put("currentPage", numberOfPage);
-        json.put("totalPages", totalPages);
-        json.put("bicycles", bicyclePage.get().collect(Collectors.toList()));
-
-        return json.toString();
+        return getJson(numberOfPage, bicyclePage, totalPages);
     }
 
-    @GetMapping("/bicycles/all/sort/{typeOfSort}/page/{numberOfPage}")
-    @ResponseBody
-    public String getSortedPageOfBicycles(@PathVariable String typeOfSort, @PathVariable int numberOfPage) {
-        final int totalPages = bicycleService.pageCount();
-        if(numberOfPage < 1 || numberOfPage > totalPages) {
-            numberOfPage = 1;
-        }
-        final Page<Bicycle> bicyclePage = bicycleService.findSortedPage(SortType.findSortTypeByDescription(typeOfSort), numberOfPage);
-
-        JSONObject json = new JSONObject();
-        json.put("currentPage", numberOfPage);
-        json.put("totalPages", totalPages);
-        json.put("bicycles", bicyclePage.get().collect(Collectors.toList()));
-
-        return json.toString();
-    }
-
-
+//    @GetMapping("/bicycles/all/type/{bicycleType}/page/{numberOfPage}")
+//    @ResponseBody
+//    public String getSortedByTypePageOfBicycles(@PathVariable String bicycleType, @PathVariable int numberOfPage) {
+//        final Page<Bicycle> bicyclePage = bicycleService.findSortedByTypePage(BicycleType.valueOf(bicycleType), numberOfPage);
+//        final int totalPages = bicyclePage.getTotalPages();
+//        numberOfPage = checkNumberOfPage(numberOfPage, totalPages);
+//
+//        return getJson(numberOfPage, bicyclePage, totalPages);
+//    }
 
     @GetMapping("/{id}")
     public Bicycle getBicycle(@PathVariable Long id) {
@@ -81,5 +77,21 @@ public class BicycleController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Long id) {
         bicycleService.delete(id);
+    }
+
+    private int checkNumberOfPage(int numberOfPage, int totalPages) {
+        if (numberOfPage < 1 || numberOfPage > totalPages) {
+            numberOfPage = 1;
+        }
+        return numberOfPage;
+    }
+
+    private String getJson(@PathVariable int numberOfPage, Page<Bicycle> bicyclePage, int totalPages) {
+        JSONObject json = new JSONObject();
+        json.put("currentPage", numberOfPage);
+        json.put("totalPages", totalPages);
+        json.put("bicycles", bicyclePage.get().collect(Collectors.toList()));
+
+        return json.toString();
     }
 }

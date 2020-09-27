@@ -1,26 +1,21 @@
 <div class="my-drop-list-button">
-  <div class="btn-group dropdown">
-    <button type="button" class="btn btn-secondary dropdown-toggle main-dd-button" id="dropdownTypeButton"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Choose type of bicycle
-    </button>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownTypeButton">
-      <button class="dropdown-item" type="button">Mountain</button>
-      <button class="dropdown-item" type="button">City</button>
-      <button class="dropdown-item" type="button">For kids</button>
+    <div class="filter-block">
+        <label for="dropdownType">Type of bicycle:</label>
+        <select id="dropdownType" class="main-dd-button">
+            <option value="ALL">All</option>
+            <option value="MOUNTAIN">Mountain</option>
+            <option value="CITY">City</option>
+            <option value="FOR_KIDS">For kids</option>
+        </select>
     </div>
-  </div>
-
-  <div class="btn-group dropdown">
-    <button type="button" class="btn btn-secondary dropdown-toggle main-dd-button" id="dropdownSort"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Sort by
-    </button>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownSort">
-      <button class="dropdown-item" type="button">Price up</button>
-      <button class="dropdown-item" type="button">Price down</button>
-      <button class="dropdown-item" type="button">Weight up</button>
-      <button class="dropdown-item" type="button">Weight down</button>
+    <div class="filter-block">
+        <label for="dropdownSort2">Sort by:</label>
+        <select id="dropdownSort2" class="main-dd-button">
+            <option value="DEFAULT">Default</option>
+            <option value="PRICE_UP">Price up</option>
+            <option value="PRICE_DOWN">Price down</option>
+            <option value="WEIGHT_UP">Weight up</option>
+            <option value="WEIGHT_DOWN">Weight down</option>
+        </select>
     </div>
-  </div>
 </div>

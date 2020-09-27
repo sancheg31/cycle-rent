@@ -1,5 +1,6 @@
 import {getBicycleTemplate} from './sections/bicycle-item-template';
 import {getPaginationTemplate} from './sections/pagination-template';
+import {navActions} from './bicycle-list';
 
 export function fillTable(bicycles) {
   let bicyclesItems = '';
@@ -17,5 +18,6 @@ export function fillPagination(totalPages, currentPage) {
   let paginationItems = getPaginationTemplate(totalPages, currentPage);
   const pagination = document.getElementById('paginationId');
   pagination.innerHTML = paginationItems;
+  navActions();
 }
 

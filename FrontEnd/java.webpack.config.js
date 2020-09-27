@@ -6,7 +6,8 @@ const TerserJSPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require('autoprefixer');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 // const hash6 = '.[hash:6]';
@@ -170,11 +171,20 @@ module.exports = {
       filename: 'css/[name]'+hash6+'.css',
     }),
 
-    new webpack.ProvidePlugin({
-      'window.jQuery': 'jquery',
-      $: 'jquery',
-      jQuery: 'jquery'
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, './assets/images/bicycles/'),
+          to: path.join(__dirname, '../src/main/resources/static/img/bicycles/')
+        },
+      ],
     }),
+
+    // new webpack.ProvidePlugin({
+    //   'window.jQuery': 'jquery',
+    //   $: 'jquery',
+    //   jQuery: 'jquery'
+    // }),
 
     new FaviconsWebpackPlugin({
       logo: './assets/images/logos/icon.png',
@@ -200,16 +210,14 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      filename: 'login.html',
+      filename: '../templates/login.html',
       template: './src/views/login/login.html',
-      favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'login']
     }),
 
     new HtmlWebpackPlugin({
-      filename: 'signUp.html',
+      filename: '../templates/signUp.html',
       template: './src/views/signUp/signUp.html',
-      favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'signUp']
      
     }),
