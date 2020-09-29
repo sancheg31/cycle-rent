@@ -180,11 +180,11 @@ module.exports = {
       ],
     }),
 
-    // new webpack.ProvidePlugin({
-    //   'window.jQuery': 'jquery',
-    //   $: 'jquery',
-    //   jQuery: 'jquery'
-    // }),
+     new webpack.ProvidePlugin({
+       'window.jQuery': 'jquery',
+       $: 'jquery',
+       jQuery: 'jquery'
+     }),
 
     new FaviconsWebpackPlugin({
       logo: './assets/images/logos/icon.png',
