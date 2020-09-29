@@ -1,4 +1,5 @@
-// Global styling for this template
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 body {
     overflow-x: hidden;
 }
@@ -48,3 +49,8 @@ img::selection {
 img::-moz-selection {
     background: transparent;
 }
+
+.hide {
+    display: none;
+}
+

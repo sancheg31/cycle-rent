@@ -6,10 +6,12 @@ const TerserJSPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require('autoprefixer');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
+
+
 
 module.exports = {
   mode: isProd ? 'production' : 'development',
@@ -21,7 +23,7 @@ module.exports = {
     signUp: './src/views/signUp/signUp.js',
     bicyclePage: './src/views/bicycle-page/bicycle-page.js',
     cartPage: './src/views/cart-page/cart-page.js',
-    checkoutPage: './src/views/checkout-page/checkout-page.js'
+    checkoutPage: './src/views/checkout-page/checkout-page.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -58,6 +60,11 @@ module.exports = {
     minimizer: [
       new OptimizeCSSAssetsPlugin({
         assetNameRegExp: /\.css$/g,
+        cssProcessor: require('cssnano'),
+        cssProcessorPluginOptions: {
+          preset: ['default', { discardComments: { removeAll: true } }],
+        },
+        canPrint: true
       }),
       new TerserJSPlugin({
         terserOptions: {
@@ -135,6 +142,11 @@ module.exports = {
           }]
       },
 
+
+
+
+
+
       {
         test: /\.(jpe?g|png|svg|gif|ico|webp)$/i,
         // exclude: /node_modules/,
@@ -146,9 +158,16 @@ module.exports = {
         }
       },
 
-      {test: /\.(woff|woff2|eot|ttf)$/, loader: 'url-loader?limit=1&name=fonts/[name].[ext]'}
+      {
+        test: /\.(woff|woff2|eot|ttf)$/,
+        loader: 'url-loader?limit=1&name=fonts/[name].[ext]'
+      }
     ]
   },
+
+
+
+
   plugins: [
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [path.join(__dirname, './dist/*')],
@@ -158,13 +177,19 @@ module.exports = {
       patterns: [
         { from: path.join(__dirname, './src/json'), to: path.join(__dirname, './dist/json') },
         { from: path.join(__dirname, './assets/images/bicycles'), to: path.join(__dirname, './dist/img/bicycles') },
+        { from: path.join(__dirname, './assets/images/logos/icon.png'), to: path.join(__dirname, './dist/img/favicon.png') },
       ],
     }),
+
+
+
+
+
 
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: isProd ? 'css/[name].[hash:6].css' : 'css/[name].css'
+      filename: isProd ? 'css/[name].[hash:6].css' : 'css/[name].css',
     }),
 
     new webpack.ProvidePlugin({
@@ -176,56 +201,49 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/views/index/index.html',
-      favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'index']
     }),
 
     new HtmlWebpackPlugin({
       filename: 'bicycle-list.html',
       template: './src/views/bicycle-list/bicycle-list.html',
-      favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'bicycleList']
     }),
 
     new HtmlWebpackPlugin({
       filename: 'my-orders.html',
       template: './src/views/my-orders/my-orders.html',
-      favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'myOrders']
     }),
 
     new HtmlWebpackPlugin({
       filename: 'login.html',
       template: './src/views/login/login.html',
-      favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'login']
     }),
 
     new HtmlWebpackPlugin({
       filename: 'signUp.html',
       template: './src/views/signUp/signUp.html',
-      favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'signUp']
     }),
-    new HtmlWebpackPlugin({ 
+
+    new HtmlWebpackPlugin({
       filename: 'bicycle-page.html',
       template: './src/views/bicycle-page/bicycle-page.html',
-      favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'bicyclePage']
     }),
 
     new HtmlWebpackPlugin({
       filename: 'cart-page.html',
       template: './src/views/cart-page/cart-page.html',
-      favicon: './assets/images/logos/icon.png',
       chunks: ['vendors', 'cartPage']
     }),
 
     new HtmlWebpackPlugin({
         filename: 'checkout-page.html',
         template: './src/views/checkout-page/checkout-page.html',
-        favicon: './assets/images/logos/icon.png',
         chunks: ['vendors', 'checkoutPage']
-      }) 
+      })
   ]
 };

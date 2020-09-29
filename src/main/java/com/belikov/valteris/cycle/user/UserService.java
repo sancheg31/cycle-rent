@@ -1,6 +1,7 @@
 package com.belikov.valteris.cycle.user;
 
 import com.belikov.valteris.cycle.user.model.User;
+import com.belikov.valteris.cycle.user.model.UserDTO;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +15,7 @@ public interface UserService {
 
     void delete(Long id);
 
-    boolean register(User user);
+    boolean register(UserDTO userDTO);
 
-    Optional<User> findByEmail(String email);
+    Optional<User> findByUsername(String username);
 }

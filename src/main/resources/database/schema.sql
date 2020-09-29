@@ -18,7 +18,7 @@
 --
 -- Table structure for table `bicycle_detail`
 --
-USE `bicycle_rent`;
+
 DROP TABLE IF EXISTS `bicycle_detail`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -65,7 +65,7 @@ CREATE TABLE `bicycles` (
 
 LOCK TABLES `bicycles` WRITE;
 /*!40000 ALTER TABLE `bicycles` DISABLE KEYS */;
-INSERT INTO `bicycles` VALUES (1,'UP! 12\" Clifford','For Children',15,6,60,'up-clifford-yellow.jpg','UP! 12\" Clifford Kid\'s bike in Yellow is perfect for getting Kids out on trail adventures. '),(2,'TITAN Expert 29″ NEW 2018','Mountain',11.5,21,85,'titan-expert-2018.jpg','This Expert 29 ″ model is developed taking into account the latest trends in the cycling industry. Copes with rough terrain.'),(3,'Gravity Flint, VG07402','Mountain',14,24,99,'gravity-flint-VG07402.jpg','Flint opens the Gravity line of bicycles with 27.5 rims (the modern standard for mountain bikes. In 27.5, a balance was found between control precision, acceleration dynamics and coasting).'),(4,'Ardis Lido 26\"','City',9.75,1,70,'ardis-lido-26.jpg','This is a bright and practical bike for the city. All kinds of adjustment of the handlebar and seat according to the position will allow anyone to find a comfortable position while riding this wonderful bike.'),(5,'Gravity Doggie, VG01802\r\n','For Children',5,1,50,'gravity-doggie-VG01802 .jpg','The gravity doggie bike, with a low frame and 18 \"wheels, is perfect for girls who are approximately 110 to 120 cm tall.');
+INSERT INTO `bicycles` VALUES (1,'UP! 12\" Clifford','For kids',15,6,60,'up-clifford-yellow.jpg','UP! 12\" Clifford Kid\'s bike in Yellow is perfect for getting Kids out on trail adventures. '),(2,'TITAN Expert 29″ NEW 2018','Mountain',11.5,21,85,'titan-expert-2018.jpg','This Expert 29 ″ model is developed taking into account the latest trends in the cycling industry. Copes with rough terrain.'),(3,'Gravity Flint, VG07402','Mountain',14,24,99,'gravity-flint-VG07402.jpg','Flint opens the Gravity line of bicycles with 27.5 rims (the modern standard for mountain bikes. In 27.5, a balance was found between control precision, acceleration dynamics and coasting).'),(4,'Ardis Lido 26\"','City',9.75,1,70,'ardis-lido-26.jpg','This is a bright and practical bike for the city. All kinds of adjustment of the handlebar and seat according to the position will allow anyone to find a comfortable position while riding this wonderful bike.'),(5,'Gravity Doggie, VG01802\r\n','For kids',5,1,50,'gravity-doggie-VG01802 .jpg','The gravity doggie bike, with a low frame and 18 \"wheels, is perfect for girls who are approximately 110 to 120 cm tall.');
 /*!40000 ALTER TABLE `bicycles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -185,7 +185,7 @@ CREATE TABLE `users` (
   `password` longtext NOT NULL,
   `role` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `email_UNIQUE` (`email`)
+  UNIQUE KEY `users_username_uindex` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -207,4 +207,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-09-22 17:54:32
+-- Dump completed on 2020-09-29 12:41:05
