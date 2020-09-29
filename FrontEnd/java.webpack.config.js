@@ -6,8 +6,8 @@ const TerserJSPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require('autoprefixer');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+
 
 const isProd = process.env.NODE_ENV === 'production';
 // const hash6 = '.[hash:6]';
@@ -60,6 +60,11 @@ module.exports = {
     minimizer: [
       new OptimizeCSSAssetsPlugin({
         assetNameRegExp: /\.css$/g,
+        cssProcessor: require('cssnano'),
+        cssProcessorPluginOptions: {
+          preset: ['default', { discardComments: { removeAll: true } }],
+        },
+        canPrint: true
       }),
       new TerserJSPlugin({
         terserOptions: {
@@ -165,11 +170,8 @@ module.exports = {
   },
   plugins: [
 
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: 'css/[name]'+hash6+'.css',
-    }),
+
+
 
     new CopyPlugin({
       patterns: [
@@ -177,18 +179,23 @@ module.exports = {
           from: path.join(__dirname, './assets/images/bicycles/'),
           to: path.join(__dirname, '../src/main/resources/static/img/bicycles/')
         },
+        {
+          from: path.join(__dirname, './assets/images/logos/icon.png'),
+          to: path.join(__dirname, '../src/main/resources/static/img/favicon.png')
+        },
       ],
     }),
 
-    // new webpack.ProvidePlugin({
-    //   'window.jQuery': 'jquery',
-    //   $: 'jquery',
-    //   jQuery: 'jquery'
-    // }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: 'css/[name]'+hash6+'.css',
+    }),
 
-    new FaviconsWebpackPlugin({
-      logo: './assets/images/logos/icon.png',
-      prefix: 'img/',
+    new webpack.ProvidePlugin({
+      'window.jQuery': 'jquery',
+      $: 'jquery',
+      jQuery: 'jquery'
     }),
 
     new HtmlWebpackPlugin({
@@ -219,7 +226,6 @@ module.exports = {
       filename: '../templates/signUp.html',
       template: './src/views/signUp/signUp.html',
       chunks: ['vendors', 'signUp']
-     
     }),
 
     new HtmlWebpackPlugin ({
@@ -227,6 +233,7 @@ module.exports = {
       template: './src/views/bicycle-page/bicycle-page.html',
       chunks: ['vendors', 'bicyclePage']
     }),
+
     new HtmlWebpackPlugin({
       filename: '../templates/cart-page.html',
       template: './src/views/cart-page/cart-page.html',
@@ -238,6 +245,5 @@ module.exports = {
       template: './src/views/checkout-page/checkout-page.html',
       chunks: ['vendors', 'checkoutPage']
     })
-
   ]
 };

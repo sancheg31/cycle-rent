@@ -30,16 +30,6 @@ public class BicycleController {
         return "bicycle-list";
     }
 
-//    @GetMapping("/bicycles/all/page/{numberOfPage}")
-//    @ResponseBody
-//    public String getPageOfBicycles(@PathVariable int numberOfPage) {
-//        final Page<Bicycle> bicyclePage = bicycleService.findPage(numberOfPage);
-//        final int totalPages = bicyclePage.getTotalPages();
-//        numberOfPage = checkNumberOfPage(numberOfPage, totalPages);
-//
-//        return getJson(numberOfPage, bicyclePage, totalPages);
-//    }
-
     @GetMapping("/bicycles/all/sort/{typeOfSort}/type/{bicycleType}/page/{numberOfPage}")
     @ResponseBody
     public String getSortedPageOfBicycles(@PathVariable String typeOfSort,
@@ -51,16 +41,6 @@ public class BicycleController {
 
         return getJson(numberOfPage, bicyclePage, totalPages);
     }
-
-//    @GetMapping("/bicycles/all/type/{bicycleType}/page/{numberOfPage}")
-//    @ResponseBody
-//    public String getSortedByTypePageOfBicycles(@PathVariable String bicycleType, @PathVariable int numberOfPage) {
-//        final Page<Bicycle> bicyclePage = bicycleService.findSortedByTypePage(BicycleType.valueOf(bicycleType), numberOfPage);
-//        final int totalPages = bicyclePage.getTotalPages();
-//        numberOfPage = checkNumberOfPage(numberOfPage, totalPages);
-//
-//        return getJson(numberOfPage, bicyclePage, totalPages);
-//    }
 
     @GetMapping("/{id}")
     public Bicycle getBicycle(@PathVariable Long id) {

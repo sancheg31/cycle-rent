@@ -20,7 +20,8 @@ target/
 *.iml
 *.ipr
 
-src/main/resources/static/libs/**
+src/main/resources/static/**
+src/main/resources/templates/
 src/main/resources/application.properties
 FrontEnd/node_modules
 FrontEnd/package-lock.json
