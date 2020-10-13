@@ -9,13 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.stream.Collectors;
 
@@ -42,9 +37,11 @@ public class BicycleController {
         return getJson(numberOfPage, bicyclePage, totalPages);
     }
 
-    @GetMapping("/{id}")
-    public Bicycle getBicycle(@PathVariable Long id) {
-        return bicycleService.getById(id).get();
+    @GetMapping("/bicycle")
+    public String getBicycle(@RequestParam Long id, Model model) {
+        Bicycle bicycle = bicycleService.getById(id).get();
+        model.addAttribute("bicycle", bicycle);
+        return "bicycle-page";
     }
 
     @PostMapping("/create")

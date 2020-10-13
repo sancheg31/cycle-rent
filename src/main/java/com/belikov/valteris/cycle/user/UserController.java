@@ -82,10 +82,10 @@ public class UserController {
         return "my-orders";
     }
 
-    @GetMapping("/bicycle")
+    /*@GetMapping("/bicycle")
     public String showBicyclePage() {
         return "bicycle-page";
-    }
+    }*/
 
     @GetMapping("/cart")
     public String showCartPage() {
